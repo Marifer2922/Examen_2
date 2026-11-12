@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" role="img" aria-label="AGROVALLE">
+  <circle cx="35" cy="35" r="30" fill="#ffffff"/>
+  <path d="M35 55 C35 40 38 28 50 18 C52 32 46 44 35 48 Z" fill="#2e8b47"/>
+  <path d="M35 55 C35 44 31 34 20 27 C19 39 24 47 35 50 Z" fill="#f4b400"/>
+  <path d="M35 58 L35 34" stroke="#14532d" stroke-width="3" stroke-linecap="round"/>
+</svg>
