@@ -15,11 +15,16 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credenciales = $request->validate([
-            'email'    => 'required|email',
+            'email'    => 'required|email|ends_with:@agrovalle.hn',
             'password' => 'required',
+        ], [
+            'email.required'    => 'El correo electrónico es obligatorio.',
+            'email.email'       => 'Ingrese un correo electrónico válido.',
+            'email.ends_with'   => 'El correo debe ser institucional (@agrovalle.hn).',
+            'password.required' => 'La contraseña es obligatoria.',
         ]);
 
-        if (Auth::attempt($credenciales)) {
+        if (Auth::attempt($credenciales, $request->boolean('remember'))) {
             $request->session()->regenerate();
 
             return redirect()->intended(route('dashboard'));
